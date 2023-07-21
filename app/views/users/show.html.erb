@@ -1,2 +1,46 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container">
+    <div class="row d-flex justify-content-between mt-5">
+        <div class="col-3">
+            <h2>User info</h2>
+            <%= image_tag 'no_image.jpg' %>
+            <table class="table">
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col"><%= current_user.name %></th>
+                </tr>
+                <tr>
+                    <th scope="col">introduction</th>
+                    <th scope="col"><%= current_user.introduction %></th>
+                </tr>
+            </table>
+            <div class="btn btn-outline-secondary btn-sm" style="width: 100%;" role="button">
+                <%= link_to  new_user_registration_path, class: 'nav-link' do %>
+                <i class="fa-solid fa-user-gear" style="color: #808080;"></i>
+                <% end %>
+            </div>
+            
+            <h3>New book</h3>
+            <%= form_with model: @book, url: '/books', method: :post do |f| %>
+            <div class="new-title">
+                <h4>Title</h4>
+                <p><%= f.text_field :title %></p>
+            </div>
+    
+            <div class="new-body">
+                <h4>Body</h4>
+                <p><%= f.text_area :body %></p>
+            </div>
+    
+            <div>
+                <%= f.submit 'Create Book' %>
+                <% end %>
+            </div>
+        </div>
+        <div class="col-7 float-right">
+          One of three columns
+        </div>
+    </div>
+</div>
+    
+    
+        
