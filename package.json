@@ -1,7 +1,7 @@
 {
   "name": "bookers2",
   "private": true,
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
   "dependencies": {
     "@babel/plugin-proposal-private-methods": "^7.18.6",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
