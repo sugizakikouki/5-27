@@ -1,4 +1,4 @@
-<div class="col-3">
+<div class ="col-md-3">
       <% if book.errors.any? %>
     <%= book.errors.count %>errors prohibited this obj from being saved:
     <ul>
@@ -24,8 +24,8 @@
     </tr>
   </table>
   <div class="btn btn-outline-secondary btn-sm" style="width: 100%;" role="button">
-    <%= link_to edit_user_path(current_user.id), class: 'nav-link' do %>
-    <i class="fa-solid fa-user-gear" style="color: #808080;"></i>
+    <%= link_to edit_user_path(user.id), class: 'nav-link' do %>
+    <i class="fas fa-user-cog" style="color: #808080;"></i>
     <% end %>
   </div>
 
